@@ -58,13 +58,6 @@ npx serve .
 
 Then open http://localhost:8000. No `npm install` needed.
 
-## Docker
-
-```bash
-docker build -t adeeb-portfolio .
-docker run --rm -p 8080:8080 adeeb-portfolio
-# http://localhost:8080
-```
 
 The image is `nginx-unprivileged` on Alpine, runs as a non-root user, serves on port 8080, and sets security headers including a Content-Security-Policy. `GET /healthz` returns `ok`.
 
