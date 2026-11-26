@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check JavaScript syntax
+        run: |
+          for f in js/*.js; do node --check "$f"; done
+
+      - name: Check required files exist
+        run: |
+          for f in index.html css/style.css js/main.js js/theme-init.js js/scene.js assets/vendor/three.module.min.js; do
+            test -f "$f" || { echo "Missing $f"; exit 1; }
+          done
+
+      - name: Build Docker image
+        run: docker build -t portfolio:ci .
+
+      - name: Smoke test container
+        run: |
+          docker run -d --name site -p 8080:8080 portfolio:ci
+          sleep 3
+          curl -fsS http://localhost:8080/healthz
+          curl -fsS http://localhost:8080/ | grep -q "Adeeb Abdurahiman"
+          curl -fsSI http://localhost:8080/js/main.js | grep -qi "content-type: .*javascript"
+
+  # Future deployment: add a job here (needs: validate), e.g. sync to S3 + CloudFront
+  # invalidation, or push the image to a registry and deploy to EC2. See README.

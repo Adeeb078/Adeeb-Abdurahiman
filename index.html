@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adeeb Abdurahiman</title>
+  <meta name="description" content="Portfolio of Adeeb Abdurahiman, a Computer Science graduate and DevOps trainee exploring cloud infrastructure, automation and IT systems.">
+  <meta name="theme-color" content="#0b0c0a">
+  <script src="js/theme-init.js"></script>
+  <meta property="og:title" content="Adeeb Abdurahiman">
+  <meta property="og:description" content="Computer Science graduate exploring DevOps, cloud infrastructure, automation and IT systems.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Particle sculpture (decorative) -->
+  <div class="scene" id="scene" aria-hidden="true">
+    <canvas id="scene-canvas"></canvas>
+    <div class="scene__fallback"></div>
+  </div>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <!-- Custom cursor (decorative, enabled only for fine pointers) -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="nav__mark" href="#top" aria-label="Adeeb Abdurahiman, back to top">
+      <span>A</span><span class="nav__mark-dot"></span><span>A</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="#about" data-nav><span class="nav__idx">01</span>About</a>
+      <a href="#skills" data-nav><span class="nav__idx">02</span>Skills</a>
+      <a href="#projects" data-nav><span class="nav__idx">03</span>Projects</a>
+      <a href="#learning" data-nav><span class="nav__idx">04</span>Learning</a>
+      <a href="#contact" data-nav><span class="nav__idx">05</span>Contact</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme" data-cursor="Theme">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-lines" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <p class="hero__name" data-reveal>
+          <span class="hero__name-rule"></span>
+          Adeeb Abdurahiman
+        </p>
+
+        <h1 class="hero__title" id="hero-title" data-split>Building, Deploying &amp; <em>Understanding</em> the Systems Behind Technology.</h1>
+
+        <div class="hero__lower">
+          <p class="hero__intro" data-reveal>
+            Computer Science graduate exploring DevOps, cloud infrastructure, automation, and IT systems. Interested in building reliable solutions and understanding how technology works behind the scenes.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--primary" href="#projects" data-cursor="Explore">
+              <span>Explore My Work</span><span class="btn__arrow" aria-hidden="true">&darr;</span>
+            </a>
+            <a class="btn" href="#contact" data-cursor="Say hi">
+              <span>Get in Touch</span><span class="btn__arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <dl class="hero__meta" data-reveal>
+          <div>
+            <dt>Status</dt>
+            <dd class="availability"><span class="availability__dot" aria-hidden="true"></span>Open to DevOps &amp; IT Support roles</dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>United Arab Emirates <span class="hero__clock" id="clock" aria-hidden="true"></span></dd>
+          </div>
+          <div class="hero__meta-form">
+            <dt>Structure</dt>
+            <dd id="morph-readout">Sphere</dd>
+          </div>
+        </dl>
+
+        <a class="hero__scroll" href="#about" aria-label="Scroll to About section">
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+          <span>Scroll</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <header class="section__head" data-reveal>
+        <span class="section__num">01</span>
+        <h2 class="section__label" id="about-title">About</h2>
+        <span class="section__rule"></span>
+      </header>
+
+      <div class="about__grid">
+        <p class="about__statement" data-split>I like knowing what happens between writing code and a service actually running.</p>
+
+        <div class="about__body">
+          <p data-reveal>I'm a recent B.Tech graduate in Computer Science and Engineering, currently training as a DevOps trainee at Zoople Technologies. My focus is the practical side: Linux, containers, deployment workflows and the cloud.</p>
+          <p data-reveal>I learn by building. My projects so far include a three-tier application deployed with Docker and Kubernetes, and a smart card web application for a college bus system. I also work with the fundamentals of IT support: Windows troubleshooting, Microsoft 365 administration and account management.</p>
+          <p data-reveal>I'm early in my career and looking for a team where I can keep learning while helping keep systems reliable.</p>
+        </div>
+
+        <dl class="facts" data-reveal>
+          <div><dt>Education</dt><dd>B.Tech, Computer Science &amp; Engineering</dd></div>
+          <div><dt>Status</dt><dd>Recent graduate</dd></div>
+          <div><dt>Training</dt><dd>DevOps Trainee, Zoople Technologies</dd></div>
+          <div><dt>Direction</dt><dd>DevOps / IT Support Engineer</dd></div>
+          <div><dt>Location</dt><dd>United Arab Emirates</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <header class="section__head" data-reveal>
+        <span class="section__num">02</span>
+        <h2 class="section__label" id="skills-title">Skills</h2>
+        <span class="section__rule"></span>
+      </header>
+
+      <div class="skills__groups">
+        <article class="skill-group" data-reveal>
+          <header class="skill-group__head">
+            <span class="skill-group__key">A</span>
+            <h3>DevOps &amp; Cloud</h3>
+          </header>
+          <ul class="skill-list">
+            <li data-cursor="">Docker</li>
+            <li data-cursor="">Kubernetes</li>
+            <li data-cursor="">Jenkins</li>
+            <li data-cursor="">AWS</li>
+            <li data-cursor="">Linux</li>
+            <li data-cursor="">Git</li>
+            <li data-cursor="">GitHub</li>
+          </ul>
+        </article>
+
+        <article class="skill-group" data-reveal>
+          <header class="skill-group__head">
+            <span class="skill-group__key">B</span>
+            <h3>Programming &amp; Web</h3>
+          </header>
+          <ul class="skill-list">
+            <li data-cursor="">HTML</li>
+            <li data-cursor="">CSS</li>
+            <li data-cursor="">JavaScript</li>
+            <li data-cursor="">Python <small>basic</small></li>
+            <li data-cursor="">MySQL</li>
+            <li data-cursor="">DBMS</li>
+          </ul>
+        </article>
+
+        <article class="skill-group" data-reveal>
+          <header class="skill-group__head">
+            <span class="skill-group__key">C</span>
+            <h3>IT Support &amp; Systems</h3>
+          </header>
+          <ul class="skill-list skill-list--compact">
+            <li data-cursor="">Windows troubleshooting</li>
+            <li data-cursor="">Microsoft 365 <small>admin fundamentals</small></li>
+            <li data-cursor="">User &amp; account management</li>
+            <li data-cursor="">OneDrive</li>
+            <li data-cursor="">Networking <small>fundamentals</small></li>
+            <li data-cursor="">Linux administration</li>
+          </ul>
+        </article>
+      </div>
+
+      <figure class="pipeline" data-reveal>
+        <figcaption class="pipeline__caption">The delivery path I'm learning to understand end to end</figcaption>
+        <ol class="pipeline__steps">
+          <li><span class="pipeline__node"></span><span class="pipeline__stage">Code</span><span class="pipeline__tool">Git &middot; GitHub</span></li>
+          <li><span class="pipeline__node"></span><span class="pipeline__stage">Build</span><span class="pipeline__tool">Jenkins</span></li>
+          <li><span class="pipeline__node"></span><span class="pipeline__stage">Package</span><span class="pipeline__tool">Docker</span></li>
+          <li><span class="pipeline__node"></span><span class="pipeline__stage">Run</span><span class="pipeline__tool">Kubernetes</span></li>
+          <li><span class="pipeline__node"></span><span class="pipeline__stage">Host</span><span class="pipeline__tool">AWS &middot; Linux</span></li>
+        </ol>
+      </figure>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <header class="section__head" data-reveal>
+        <span class="section__num">03</span>
+        <h2 class="section__label" id="projects-title">Selected projects</h2>
+        <span class="section__rule"></span>
+      </header>
+
+      <!-- To add a project: duplicate an <article class="project"> block. Layout alternates automatically. -->
+
+      <article class="project" data-reveal>
+        <div class="project__visual" data-cursor="Explore" data-tilt>
+          <svg viewBox="0 0 800 500" role="img" aria-label="Abstract illustration: a smart card with a chip being scanned, above a bus route with stops">
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="110" y="80" width="300" height="190" rx="14"/>
+              <rect x="146" y="124" width="52" height="40" class="v-accent-stroke"/>
+              <path d="M146 144H198M172 124V164" opacity=".5"/>
+              <path d="M146 214H300M146 236H250" opacity=".45"/>
+              <path d="M330 120a22 22 0 0 1 0 44M344 108a38 38 0 0 1 0 68" opacity=".5"/>
+            </g>
+            <g class="v-scan">
+              <rect x="100" y="80" width="320" height="2" class="v-accent-fill"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="500" y="110" width="200" height="130" rx="6" opacity=".35"/>
+              <path d="M500 150H700M560 110V240" opacity=".25"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M60 390H740" opacity=".4"/>
+              <path d="M60 390H740" class="v-route" stroke-dasharray="6 12"/>
+            </g>
+            <g fill="currentColor">
+              <circle cx="120" cy="390" r="7" class="v-stop"/>
+              <circle cx="300" cy="390" r="7" class="v-stop"/>
+              <circle cx="480" cy="390" r="7" class="v-stop"/>
+              <circle cx="680" cy="390" r="7" class="v-stop"/>
+            </g>
+            <g class="v-bus" fill="currentColor">
+              <rect x="86" y="338" width="64" height="30" rx="4" opacity=".9"/>
+              <rect x="94" y="346" width="12" height="9" class="v-bus-win"/>
+              <rect x="112" y="346" width="12" height="9" class="v-bus-win"/>
+              <rect x="130" y="346" width="12" height="9" class="v-bus-win"/>
+            </g>
+            <g fill="currentColor" font-family="JetBrains Mono, monospace" font-size="12" opacity=".6">
+              <text x="110" y="62">SCAN</text>
+              <text x="500" y="92">RECORDS</text>
+              <text x="60" y="440">ROUTE</text>
+            </g>
+          </svg>
+        </div>
+        <div class="project__info">
+          <span class="project__num">01</span>
+          <h3 class="project__title">CardScan: College Bus Smart Card System</h3>
+          <p class="project__desc">A web application for a college bus smart card system, written in Python.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li>Python</li>
+          </ul>
+          <div class="project__links">
+            <a class="link" href="https://github.com/Adeeb078/cardscan" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project--flip" data-reveal>
+        <div class="project__visual" data-cursor="Explore" data-tilt>
+          <svg viewBox="0 0 800 500" role="img" aria-label="Abstract illustration: frontend, API and database layers inside a cluster">
+            <rect class="v-cluster" x="60" y="40" width="680" height="420" fill="none" stroke="currentColor" stroke-dasharray="6 10" opacity=".35"/>
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="250" y="80" width="300" height="76"/>
+              <rect x="250" y="212" width="300" height="76" class="v-accent-stroke"/>
+              <rect x="250" y="344" width="300" height="76"/>
+              <path d="M400 156V212M400 288V344" opacity=".6"/>
+            </g>
+            <g class="v-flow" fill="currentColor">
+              <circle class="v-dot v-dot--a" cx="400" cy="156" r="4"/>
+              <circle class="v-dot v-dot--b" cx="400" cy="288" r="4"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".7">
+              <ellipse cx="640" cy="382" rx="40" ry="12"/>
+              <path d="M600 382V420A40 12 0 0 0 680 420V382"/>
+              <path d="M550 382H600" stroke-dasharray="3 5"/>
+            </g>
+            <g fill="currentColor" font-family="JetBrains Mono, monospace" font-size="13" opacity=".75">
+              <text x="270" y="124">FRONTEND</text>
+              <text x="270" y="256">BACKEND API</text>
+              <text x="270" y="388">MYSQL</text>
+              <text x="602" y="450">VOLUME</text>
+              <text x="84" y="72">CLUSTER</text>
+            </g>
+          </svg>
+        </div>
+        <div class="project__info">
+          <span class="project__num">02</span>
+          <h3 class="project__title">Three-Tier Application Deployment</h3>
+          <p class="project__desc">A practical DevOps project: a frontend, a backend API and a MySQL database, containerized with Docker and deployed on Kubernetes. It covers how the tiers talk to each other, how data persists, and how deployments are managed.</p>
+          <ul class="project__points">
+            <li>Docker containerization</li>
+            <li>Kubernetes deployment</li>
+            <li>Application architecture</li>
+            <li>Services &amp; networking</li>
+            <li>Persistent storage</li>
+          </ul>
+          <ul class="tags" aria-label="Technologies">
+            <li>Docker</li><li>Kubernetes</li><li>Linux</li><li>MySQL</li>
+          </ul>
+          <div class="project__links">
+            <a class="link" href="#" data-placeholder aria-disabled="true" title="Repository link to be added">Source code <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="project__visual" data-cursor="Explore" data-tilt>
+          <svg viewBox="0 0 800 500" role="img" aria-label="Abstract illustration: wireframe sphere of points">
+            <g class="v-orbit" transform="translate(400 250)" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle r="170" opacity=".7"/>
+              <ellipse rx="170" ry="60" opacity=".5"/>
+              <ellipse rx="170" ry="60" transform="rotate(60)" opacity=".5"/>
+              <ellipse rx="170" ry="60" transform="rotate(120)" opacity=".5"/>
+              <ellipse rx="60" ry="170" opacity=".35"/>
+            </g>
+            <g class="v-pts" transform="translate(400 250)" fill="currentColor">
+              <circle cx="-170" cy="0" r="4"/><circle cx="170" cy="0" r="4"/>
+              <circle cx="0" cy="-170" r="4"/><circle cx="0" cy="170" r="4"/>
+              <circle cx="-120" cy="-120" r="3"/><circle cx="120" cy="-120" r="3"/>
+              <circle cx="-120" cy="120" r="3"/><circle cx="120" cy="120" r="3"/>
+              <circle cx="85" cy="-30" r="6" class="v-accent-fill"/>
+            </g>
+            <g fill="currentColor" font-family="JetBrains Mono, monospace" font-size="12" opacity=".6">
+              <text x="70" y="64">HTML / CSS / JS</text>
+              <text x="620" y="446">THREE.JS</text>
+            </g>
+          </svg>
+        </div>
+        <div class="project__info">
+          <span class="project__num">03</span>
+          <h3 class="project__title">Personal Portfolio</h3>
+          <p class="project__desc">The site you're on. An interactive portfolio built with plain HTML, CSS and JavaScript, with a Three.js particle sculpture that reacts to the cursor and the scroll position.</p>
+          <ul class="tags" aria-label="Technologies">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Three.js</li>
+          </ul>
+          <div class="project__links">
+            <a class="link" href="#" data-placeholder aria-disabled="true" title="Repository link to be added">Source code <span aria-hidden="true">&nearr;</span></a>
+            <a class="link" href="#" data-placeholder aria-disabled="true" title="Live demo link to be added">Live demo <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
+      </article>
+    
+      <div class="repos" id="repos" aria-labelledby="repos-title">
+        <header class="repos__head">
+          <h3 id="repos-title" class="repos__title">More on GitHub</h3>
+          <a class="link" href="https://github.com/Adeeb078?tab=repositories" target="_blank" rel="noopener noreferrer" data-cursor="Open">All repositories <span aria-hidden="true">&nearr;</span></a>
+        </header>
+        <ul class="repo-list" id="repo-list" aria-live="polite" aria-busy="true">
+          <li class="repo-list__note">Loading repositories&hellip;</li>
+        </ul>
+        <noscript><p class="repo-list__note">Enable JavaScript to see the latest repositories, or visit <a class="link" href="https://github.com/Adeeb078?tab=repositories">GitHub</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- LEARNING -->
+    <section class="section learning" id="learning" aria-labelledby="learning-title">
+      <header class="section__head" data-reveal>
+        <span class="section__num">04</span>
+        <h2 class="section__label" id="learning-title">Learning</h2>
+        <span class="section__rule"></span>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline__item timeline__item--current" data-reveal>
+          <div class="timeline__when"><span class="timeline__pip" aria-hidden="true"></span>Now</div>
+          <div class="timeline__what">
+            <h3>DevOps Trainee</h3>
+            <p class="timeline__org">Zoople Technologies &middot; Training programme</p>
+            <p>Hands-on training in the tools and workflows behind modern software delivery.</p>
+            <ul class="tags tags--lg" aria-label="Learning areas">
+              <li>Linux</li>
+              <li>System administration</li>
+              <li>Git &amp; GitHub</li>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Jenkins</li>
+              <li>Kubernetes</li>
+              <li>Containerization</li>
+              <li>Deployment workflows</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__when"><span class="timeline__pip" aria-hidden="true"></span>Degree</div>
+          <div class="timeline__what">
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <p class="timeline__org">Graduate</p>
+            <p>Computer science fundamentals, including databases and web technologies.</p>
+          </div>
+        </li>
+        <li class="timeline__item" data-reveal>
+          <div class="timeline__when"><span class="timeline__pip" aria-hidden="true"></span>Next</div>
+          <div class="timeline__what">
+            <h3>Toward a DevOps or IT Support role</h3>
+            <p>More hands-on practice with CI/CD, containers and cloud deployment, and a first role where I can learn from a team.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <header class="section__head" data-reveal>
+        <span class="section__num">05</span>
+        <h2 class="section__label" id="contact-title">Contact</h2>
+        <span class="section__rule"></span>
+      </header>
+
+      <div class="contact__grid">
+        <div class="contact__lead">
+          <p class="contact__big" data-split>Have something interesting to build? <em>Let's connect.</em></p>
+          <ul class="contact__links" data-reveal>
+            <li>
+              <span class="contact__k">Email</span>
+              <a href="mailto:your.email@example.com" data-config="email" data-cursor="Write">your.email@example.com</a>
+            </li>
+            <li>
+              <span class="contact__k">GitHub</span>
+              <a href="https://github.com/Adeeb078" target="_blank" rel="noopener noreferrer" data-cursor="Open">github.com/Adeeb078</a>
+            </li>
+            <li>
+              <span class="contact__k">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" data-config="linkedin" data-cursor="Open">linkedin.com/in/your-profile</a>
+            </li>
+            <li>
+              <span class="contact__k">Location</span>
+              <span>United Arab Emirates</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate data-reveal>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="e-name">
+            <p class="field__error" id="e-name" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150" aria-describedby="e-email">
+            <p class="field__error" id="e-email" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="f-subject">Subject</label>
+            <input id="f-subject" name="subject" type="text" required maxlength="150" aria-describedby="e-subject">
+            <p class="field__error" id="e-subject" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="5" required minlength="10" maxlength="2000" aria-describedby="e-message"></textarea>
+            <p class="field__error" id="e-message" role="alert"></p>
+          </div>
+          <!-- Honeypot: real visitors never see or fill this -->
+          <div class="field field--trap" aria-hidden="true">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form__foot">
+            <button class="btn btn--primary" type="submit" data-cursor="Send">
+              <span>Send message</span><span class="btn__arrow" aria-hidden="true">&rarr;</span>
+            </button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__name">Adeeb Abdurahiman</p>
+    <p class="footer__copy">&copy; <span id="year">2026</span></p>
+    <nav class="footer__links" aria-label="Social">
+      <a href="https://github.com/Adeeb078" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" data-config="linkedin">LinkedIn</a>
+    </nav>
+    <button class="footer__top" id="to-top" type="button" data-cursor="Top">
+      <span>Back to top</span><span class="footer__top-arrow" aria-hidden="true">&uarr;</span>
+    </button>
+  </footer>
+</body>
+</html>
