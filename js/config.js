@@ -20,7 +20,7 @@ export const CONFIG = {
   githubUser: 'Adeeb078',
   // Repos to leave out (case-insensitive). Featured projects above are already
   // listed in full, so keep them here to avoid duplicates. Forks are skipped.
-  hideRepos: ['cardscan', 'Adeeb078'],
+  hideRepos: ['github-actions-practice', 'Adeeb078'],
   maxRepos: 8,
 
   // Timezone for the small clock in the hero.
